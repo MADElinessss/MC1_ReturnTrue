@@ -28,8 +28,8 @@ struct ProductTitleView: View {
                 }
                 Spacer()
                 Image(systemName: "square.and.arrow.up")
-                Spacer()
-                    .frame(height: 24)
+                    .resizable()
+                    .frame(width: 30, height: 30)
                
             }
             HStack {

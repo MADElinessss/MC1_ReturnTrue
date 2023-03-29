@@ -1,20 +1,22 @@
 //
-//  ProductDetailView.swift
+//  SwiftUIView.swift
 //  
 //
-//  Created by changgyo seo on 2023/03/27.
+//  Created by changgyo seo on 2023/03/28.
 //
 
 import SwiftUI
 
-
 struct ProductDetailView: View {
-    
     var body: some View {
         NavigationView {
-            VStack{
-                ProductTabView()
-                ProductTitleView()
+            ScrollView {
+                VStack{
+                    ProductTabView()
+                    ProductTitleView()
+                    Spacer()
+                    ProductDescriptionView(styles: [.style3, .style5, .style6, .style7, .style9, .style10, .style13])
+                }
             }
             .modifier(SetNavigaitonBar())
         }
@@ -23,3 +25,8 @@ struct ProductDetailView: View {
     }
 }
 
+struct Style1_Previews: PreviewProvider {
+    static var previews: some View {
+        ProductDetailView()
+    }
+}

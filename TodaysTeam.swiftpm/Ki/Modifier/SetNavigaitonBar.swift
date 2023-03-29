@@ -19,7 +19,7 @@ struct SetNavigaitonBar: ViewModifier {
                     .frame(width: 40, height: 40)
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: SwiftUIView()){
+                NavigationLink(destination: dummy()){
                     Image(systemName: "cart")
                         .foregroundColor(.black)
                         .font(.system(size: 25, weight: .light))
