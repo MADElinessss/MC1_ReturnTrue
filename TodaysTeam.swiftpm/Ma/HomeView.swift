@@ -17,57 +17,53 @@ struct HomeView: View {
     
     var body: some View {
         //검색창+북마크+카트(버튼)
-        NavigationView {
-            VStack{
-                HStack{
-                    SearchBar(text: $searchText)
-                        .padding(.leading, 25)
-                        .padding(.trailing, 10)
-                    Image(systemName: "bookmark")
+        VStack{
+            HStack{
+                SearchBar(text: $searchText)
+                    .padding(.leading, 25)
+                    .padding(.trailing, 10)
+                Image(systemName: "bookmark")
+                    .font(.system(size: 25, weight: .light))
+                    .imageScale(.medium)
+                    .frame(width: 40, height: 40)
+                NavigationLink(destination: CartView()){
+                    Image(systemName: "cart")
+                        .foregroundColor(.black)
                         .font(.system(size: 25, weight: .light))
                         .imageScale(.medium)
                         .frame(width: 40, height: 40)
-                    NavigationLink(destination: CartView()){
-                        Image(systemName: "cart")
-                            .foregroundColor(.black)
-                            .font(.system(size: 25, weight: .light))
-                            .imageScale(.medium)
-                            .frame(width: 40, height: 40)
-                            .padding(.trailing, 20)
-                        //Spacer()
-                    }
+                        .padding(.trailing, 20)
+                    //Spacer()
                 }
-                //뷰페이저 -> 일단은 이미지로 붙여요
-                HStack{
-                    Image("menu")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }
-                
-                ScrollView{
-                    HStack(spacing: 10){
-                        VStack{
-                            ForEach(Array(leftCards.enumerated()), id: \.element){
-                                offset, card in
-                                CardView(card: card)
-                                    .frame(height: offset % 3 == 0 ? 400 : offset % 3 == 1 ? 300 : 500)
-                                    .padding(.all, 15)
-                            }
+            }
+            //뷰페이저 -> 일단은 이미지로 붙여요
+            HStack{
+                Image("menu")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+            
+            ScrollView{
+                HStack(spacing: 10){
+                    VStack{
+                        ForEach(Array(leftCards.enumerated()), id: \.element){
+                            offset, card in
+                            CardView(card: card)
+                                .frame(height: offset % 3 == 0 ? 400 : offset % 3 == 1 ? 300 : 500)
+                                .padding(.all, 15)
                         }
-                        VStack{
-                            ForEach(Array(rightCards.enumerated()), id : \.element){
-                                offset, card in
-                                CardView(card: card)
-                                    .frame(height: offset % 3 == 0 ? 500 : offset % 3 == 1 ? 300 : 400)
-                                    .padding(.all, 15)
-                            }
+                    }
+                    VStack{
+                        ForEach(Array(rightCards.enumerated()), id : \.element){
+                            offset, card in
+                            CardView(card: card)
+                                .frame(height: offset % 3 == 0 ? 500 : offset % 3 == 1 ? 300 : 400)
+                                .padding(.all, 15)
                         }
                     }
                 }
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -117,8 +113,8 @@ struct CardView: View{
     }
 }
 struct HomeView_Previews: PreviewProvider {
-        static var previews: some View {
-            HomeView()
-        }
+    static var previews: some View {
+        HomeView()
+    }
 }
 
