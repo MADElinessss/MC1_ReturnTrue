@@ -14,10 +14,9 @@ struct FivePage: View{
     var body: some View{
         HStack(spacing: 1){
             ScrollView(showsIndicators: false){
-                leftRectangle()
-                leftRectangle()
-                leftRectangle()
-                leftRectangle()
+                leftRectangle(title: "Koong", price: "3,333,333", img: nil, company: nil, deliveryFee: "무료", personColor: "블루")
+                leftRectangle(title: "Koong", price: "3,333,333", img: nil, company: nil, deliveryFee: "무료", personColor: "블루")
+                leftRectangle(title: "Koong", price: "3,333,333", img: nil, company: nil, deliveryFee: "무료", personColor: "블루")
                 Spacer().frame(height: 15)
             }
             
@@ -30,32 +29,36 @@ struct FivePage: View{
                         Text("총 상품금액")
                         Spacer()
                         Text("61,800원")
+                            .fontWeight(.bold)
                     }
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
                     
                     HStack(alignment: .firstTextBaseline){
                         Text("총 배송비")
                         Spacer()
                         Text("+3,000원")
+                            .fontWeight(.bold)
                     }
-                    .font(.system(size: 25))
-                    
+                    .padding(.vertical,12)
+                    .font(.system(size: 20))
                     HStack{
                         Text("총 할인금액")
                         Spacer()
                         Text("-16.200원")
+                            .fontWeight(.bold)
                     }
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
                     
                     
                     HStack{
                         Text("결제금액")
                             .fontWeight(.bold)
+                            .font(.system(size: 20))
                         Spacer()
                         Text("48,600원")
                             .fontWeight(.bold)
                     }
-                    .font(.system(size: 35))
+                    .font(.system(size: 32))
                     .padding(.top)
                 }
                 .padding(15)
@@ -65,7 +68,7 @@ struct FivePage: View{
                 
                 Button{} label: {
                     Text("3개 상품 구매하기")
-                        .font(.system(size: 30))
+                        .font(.system(size: 24))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                 }

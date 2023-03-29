@@ -10,18 +10,36 @@ import SwiftUI
 struct leftRectangle : View {
     @State private var isChecked = false
     
+    var title: String?
+    var price: String?
+    var img: Image?
+    var company: String?
+    var deliveryFee: String
+    var personColor: String?
+    
+    init(isChecked: Bool = false, title: String? = nil, price: String? = nil, img: Image? = nil, company: String? = nil, deliveryFee: String = "3000원", personColor: String = "화이트") {
+        self.isChecked = isChecked
+        self.title = title
+        self.price = price
+        self.img = img
+        self.company = company
+        self.deliveryFee = deliveryFee
+        self.personColor = personColor
+    }
+    
     var body : some View {
         
         VStack{
             VStack{
-                Spacer()
-                Text("ibizashop 배송")
+                //Spacer()
+                Text(self.company ?? "ibizashop 배송")
                 // 어떨때는 . , :
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                    .font(.system(size: 20, weight: .medium, design: .default))
+                    .padding(.top,12.0)
             }
             Rectangle()
-                .frame(height: 3)
-                .foregroundColor(.gamLightGray0)
+                .frame(height: 1)
+                .foregroundColor(.gamLightGray1)
             
             HStack(alignment:.top){
                 VStack{
@@ -44,12 +62,16 @@ struct leftRectangle : View {
                             .frame(height: 150)
                             .cornerRadius(10)
                         
-                        Text("[ibiza] 접이식 빨래 양말건조대")
+                        Text(self.title ?? "[ibiza] \n접이식빨래 양말건조대")
                             .fixedSize(horizontal: false, vertical: true)
-                            .font(.system(size: 24, weight: .regular, design: .rounded))
+                            .frame(maxWidth: .infinity, alignment:.leading)
+                            .font(.system(size: 22, weight: .bold, design: .rounded))
+                            .foregroundColor(.gamDarkGray2)
                             .padding()
                         Spacer()
-                        Image(systemName: "x.square.fill")
+                        Image(systemName: "xmark")
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundColor(.gamDarkGray2)
                             .padding()
                         
                         
@@ -59,17 +81,19 @@ struct leftRectangle : View {
                     VStack{
                         VStack(spacing: 15){
                             HStack{
-                                Text("화이트")
-                                    .font(.system(size: 16))
+                                Text(self.personColor ?? "화이트")
+                                    .font(.system(size: 20))
                                 Spacer()
-                                Image(systemName: "x.square.fill")
+                                Image(systemName: "xmark")
                                     .font(.system(size: 15))
                                     .foregroundColor(.gamDarkGray1)
                             }
                             HStack{
                                 Text("1명")
                                 Spacer()
-                                Text("8,900원")
+                                Text(self.price ?? "8,900원")
+                                    .font(.system(size: 20, weight: .bold))
+                                    .foregroundColor(.gamDarkGray2)
                             }
                         }
                         .padding()
@@ -77,14 +101,17 @@ struct leftRectangle : View {
                         
                         HStack{
                             Text("옵션변경")
+                                .foregroundColor(.gamDarkGray2)
+                                .padding(.trailing,8)
                             Text("바로구매")
+                                .foregroundColor(.gamDarkGray2)
                             Spacer()
-                            Text("8,900원")
-                                .font(.system(size: 25, weight: .bold))
+                            Text(self.price ?? "8,900원")
+                                .font(.system(size: 20, weight: .bold))
                         }
                         .padding(.vertical)
                     }
-                    .font(.system(size: 20, weight: .regular, design: .rounded))
+                    .font(.system(size: 16, weight: .regular, design: .rounded))
                 }
                 
             }
@@ -95,11 +122,17 @@ struct leftRectangle : View {
                 .frame(height: 3)
                 .foregroundColor(Color.gamLightGray0)
             VStack(spacing:6){
-                Text("배송비 3,000원")
-                Text("묶음배송 상품 61,100원 추가시 무료배송")
-                Text("묶음배송 상품 추가하기 > ")
-                    .font(.system(size:16, weight: .bold))
-                    .foregroundColor(Color.mainColor)
+                Text("배송비 " + self.deliveryFee)
+                    .font(.system(size: 20))
+                
+                if deliveryFee != "무료" {
+                    Text("묶음배송 상품 61,100원 추가시 무료배송")
+                        .font(.system(size: 16, weight: .medium))
+                        .foregroundColor(.gamDarkGray0)
+                    Text("묶음배송 상품 추가하기 > ")
+                        .font(.system(size:18, weight: .bold))
+                        .foregroundColor(Color.mainColor)
+                }
             }
             .padding(.bottom, 10)
         }
