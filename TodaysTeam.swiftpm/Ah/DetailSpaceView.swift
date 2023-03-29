@@ -135,12 +135,7 @@ struct DetailSpaceView: View {
             Circle()
                 .frame(width: 30, height: 30)
                 .overlay(
-                    //                    NavigationLink {
-                    //
-                    //                    }
-                    Button {
-                        print("plus")
-                    } label: {
+                    NavigationLink(destination: ThirdPage()) {
                         Image(systemName: "plus")
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.white)
@@ -151,9 +146,7 @@ struct DetailSpaceView: View {
             Circle()
                 .frame(width: 30, height: 30)
                 .overlay(
-                    Button {
-                        print("plus")
-                    } label: {
+                    NavigationLink(destination: ThirdPage()) {
                         Image(systemName: "plus")
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.white)
@@ -164,9 +157,7 @@ struct DetailSpaceView: View {
             Circle()
                 .frame(width: 30, height: 30)
                 .overlay(
-                    Button {
-                        print("plus")
-                    } label: {
+                    NavigationLink(destination: ThirdPage()) {
                         Image(systemName: "plus")
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.white)
@@ -177,9 +168,7 @@ struct DetailSpaceView: View {
             Circle()
                 .frame(width: 30, height: 30)
                 .overlay(
-                    Button {
-                        print("plus")
-                    } label: {
+                    NavigationLink(destination: ThirdPage()) {
                         Image(systemName: "plus")
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.white)
