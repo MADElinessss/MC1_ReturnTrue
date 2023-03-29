@@ -15,7 +15,6 @@ struct ProductDetailView: View {
                     ProductTabView()
                     ProductTitleView()
                     Spacer()
-                    ProductDescriptionView(styles: [.style3, .style5, .style6, .style7, .style9, .style10, .style13])
                 }
             }
             .modifier(SetNavigaitonBar())
