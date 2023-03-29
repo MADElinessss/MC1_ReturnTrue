@@ -127,7 +127,7 @@ struct DetailSpaceView: View {
     @ViewBuilder
     var MainImage: some View {
         ZStack {
-            Image("1")
+            Image("image3")
                 .resizable()
                 .frame(height: 1000)
             //                    .scaledToFill()
