@@ -48,3 +48,9 @@ extension Color {
     }
 }
 
+extension Int {
+    var adjust: CGFloat {
+        return  CGFloat(self) * (UIScreen.main.bounds.width / 1024)
+    }
+}
+
