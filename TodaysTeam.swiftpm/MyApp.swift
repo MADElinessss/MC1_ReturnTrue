@@ -28,7 +28,6 @@ struct MyApp: App {
                     }
             }
             .font(.footnote)
-
         }
     }
 }
