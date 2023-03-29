@@ -13,16 +13,16 @@ struct SpaceModel: Identifiable {
 }
 
 let spaceEntitys = [
-    SpaceModel(image: Image("3")),
-    SpaceModel(image: Image("4")),
-    SpaceModel(image: Image("5")),
-    SpaceModel(image: Image("6")),
-    SpaceModel(image: Image("3")),
-    SpaceModel(image: Image("4")),
-    SpaceModel(image: Image("5")),
-    SpaceModel(image: Image("6")),
-    SpaceModel(image: Image("3")),
-    SpaceModel(image: Image("4")),
-    SpaceModel(image: Image("5")),
-    SpaceModel(image: Image("6"))
+    SpaceModel(image: Image("chair1")),
+    SpaceModel(image: Image("chair2")),
+    SpaceModel(image: Image("desk1")),
+    SpaceModel(image: Image("monitor1")),
+    SpaceModel(image: Image("candy")),
+    SpaceModel(image: Image("piltong")),
+    SpaceModel(image: Image("tv1")),
+    SpaceModel(image: Image("monitor1")),
+    SpaceModel(image: Image("chair1")),
+    SpaceModel(image: Image("tv1")),
+    SpaceModel(image: Image("chair2")),
+    SpaceModel(image: Image("monitor1"))
 ]

@@ -77,18 +77,17 @@ struct Card : Hashable {
 }
 //예시 더미 데이터 -> 장소 사진으로 변경
 let leftCards: [Card] = [
-    .init(title: "Main Lab", imgName: "img1"),
-    .init(title: "지곡회관", imgName: "img2"),
-    .init(title: "Colab Lab", imgName: "img4"),
-    .init(title: "Main Lab", imgName: "img6"),
-    
+    .init(title: "Main Lab", imgName: "image3"),
+    .init(title: "지곡회관", imgName: "image2"),
+    .init(title: "Colab Lab", imgName: "image1"),
+    .init(title: "Main Lab", imgName: "image4"),
 ]
 
 let rightCards: [Card] = [
-    .init(title: "Main Lab", imgName: "img5"),
-    .init(title: "지곡회관", imgName: "img4"),
-    .init(title: "Colab Lab", imgName: "img3"),
-    .init(title: "Main Lab", imgName: "img6"),
+    .init(title: "Main Lab", imgName: "image5"),
+    .init(title: "지곡회관", imgName: "image6"),
+    .init(title: "Colab Lab", imgName: "image7"),
+    .init(title: "Main Lab", imgName: "image8"),
     
 ]
 
