@@ -95,7 +95,7 @@ let rightCards: [Card] = [
 struct CardView: View{
     let card : Card
     var body: some View{
-        NavigationLink(destination: Text(card.title)) {
+        NavigationLink(destination: DetailSpaceView()) {
             GeometryReader{
                 proxy in
                 VStack{
