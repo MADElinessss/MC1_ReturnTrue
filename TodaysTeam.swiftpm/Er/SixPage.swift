@@ -28,7 +28,7 @@ struct SixPage: View {
                     Text(" 결제")
                         .font(.system(size: 36, weight: .bold))
                 }
-                Image("birthday")
+                Image("final")
                 VStack{
                     Text("주문완료!")
                         .font(.system(size: 40, weight: .bold))
