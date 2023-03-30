@@ -44,7 +44,7 @@ struct MemberCell: View {
                     Text(self.company)
                         .font(.system(size: 18))
                         .foregroundColor(Color.gamDarkGray0)
-                    Text("[한정수량][해외]" + self.title)
+                    Text("[한정수량] " + self.title)
                         .font(.system(size: 22))
                     HStack{
                         Text(self.discountRate + " ")
@@ -63,9 +63,6 @@ struct MemberCell: View {
                             .foregroundColor(Color.gamDarkGray0)
                     }
                     HStack{
-                        Text("해외직구")
-                            .padding(5)
-                            .background(RoundedRectangle(cornerRadius: 6).fill(Color.gamLightGray1))
                         Text("무료배송")
                             .padding(5)
                             .background(RoundedRectangle(cornerRadius: 6).fill(Color.gamLightGray1))
