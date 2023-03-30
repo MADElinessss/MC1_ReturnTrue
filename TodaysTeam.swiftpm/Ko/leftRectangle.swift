@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct leftRectangle : View {
-    @State private var isChecked = false
+    @State private var isChecked = true
+    
+    var member: BestItemModel
     
     var title: String?
     var price: String?
-    var img: Image?
+    var img: Image
     var company: String?
     var deliveryFee: String
     var personColor: String?
     
-    init(isChecked: Bool = false, title: String? = nil, price: String? = nil, img: Image? = nil, company: String? = nil, deliveryFee: String = "3000원", personColor: String = "화이트") {
-        self.isChecked = isChecked
-        self.title = title
-        self.price = price
-        self.img = img
-        self.company = company
-        self.deliveryFee = deliveryFee
+    init(member: BestItemModel, deliveryFee: String = "3000원", personColor: String = "블루") {
+        self.member = member
+        self.title = member.title
+        self.price = member.price
+        self.img = member.img
+        self.company = member.company
         self.personColor = personColor
+        self.deliveryFee = deliveryFee
+        self.isChecked = true
     }
-    
+
+
     var body : some View {
         
         VStack{
@@ -43,7 +47,7 @@ struct leftRectangle : View {
             
             HStack(alignment:.top){
                 VStack{
-                    Image(systemName: isChecked ? "checkmark.square" : "checkmark.square.fill")
+                    Image(systemName: isChecked ? "checkmark.square.fill" : "checkmark.square")
                         .resizable()
                         .scaledToFit()
                         .frame(width:27)
@@ -56,7 +60,7 @@ struct leftRectangle : View {
                 
                 VStack{
                     HStack(alignment:.top){
-                        Image("MyImage")
+                        self.img
                             .resizable()
                             .scaledToFit()
                             .frame(height: 150)
@@ -150,3 +154,8 @@ struct leftRectangle : View {
 }
 
 
+struct leftRectangle_Previews: PreviewProvider {
+    static var previews: some View{
+        leftRectangle(member: items[0])
+    }
+}

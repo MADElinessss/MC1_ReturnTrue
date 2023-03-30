@@ -14,11 +14,12 @@ struct FivePage: View{
     var body: some View{
         HStack(spacing: 1){
             ScrollView(showsIndicators: false){
-                leftRectangle(title: "Koong", price: "3,333,333", img: nil, company: nil, deliveryFee: "무료", personColor: "블루")
-                leftRectangle(title: "Koong", price: "3,333,333", img: nil, company: nil, deliveryFee: "무료", personColor: "블루")
-                leftRectangle(title: "Koong", price: "3,333,333", img: nil, company: nil, deliveryFee: "무료", personColor: "블루")
-                Spacer().frame(height: 15)
-            }
+                
+                ForEach(items) { item in
+                    leftRectangle(member: item)
+                    Spacer().frame(height: 15)
+                    }
+                }
             
             
             
@@ -89,7 +90,8 @@ struct FivePage: View{
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View{ FivePage()
+struct FivePage_Previews: PreviewProvider {
+    static var previews: some View{
+        FivePage()
     }
 }
