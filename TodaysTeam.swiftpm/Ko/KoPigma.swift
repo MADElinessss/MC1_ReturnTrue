@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Style {
-    static var eren: [Style] = [
+    static var koong: [Style] = [
         .style1(image: "Ko_St1", title: "Koong \n \n # Stay hungry, Stay foolish \n # 끌리면 하라"),
         .style9(image: "Ko_St9", title: "\"Koong\"", subTitle: "사람을, 좋아해요!\n새로운 것을 배우고 싶어요"),
         .style4(image: ["Ko_St4_1", "Ko_St4_2","Ko_St_3"]),
