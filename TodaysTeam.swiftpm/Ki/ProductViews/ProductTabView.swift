@@ -9,25 +9,23 @@ import SwiftUI
 
 struct ProductTabView: View {
     
+    let images: [UIImage]
     @State var currentIndex: Int = 0
     var temp = 3
 
     var body: some View {
         TabView {
             ForEach(0..<temp) { i in
-                ZStack {
-                    Color.black
-                    Text("Row: \(i)")  .foregroundColor(.white)
-                }
-                .clipShape(Rectangle())
-                .overlay {
-                    GeometryReader { proxy -> Color in
-                        let minX = proxy.frame(in: .global).minX
-                        self.currentIndex = getIndex(-minX)
-                        
-                        return Color.clear
+                Image(uiImage: images[i])
+                    .clipShape(Rectangle())
+                    .overlay {
+                        GeometryReader { proxy -> Color in
+                            let minX = proxy.frame(in: .global).minX
+                            self.currentIndex = getIndex(-minX)
+                            
+                            return Color.clear
+                        }
                     }
-                }
             }
         }
         .frame(width: UIScreen.main.bounds.width, height: 1000)
@@ -58,9 +56,3 @@ extension ProductTabView {
     }
 }
 
-
-struct previewr: PreviewProvider {
-    static var previews: some View {
-        ProductDetailView()
-    }
-}

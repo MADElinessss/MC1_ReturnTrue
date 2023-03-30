@@ -8,12 +8,12 @@
 import SwiftUI
 
 let SoldMemberItem: [BestItemModel] = [
-    BestItemModel(company: "잼몰", title: "잼", discountRate: "29%", price: "5,839,220", rate: "4.3", reviews: "302", img: Image("dog")),
-    BestItemModel(company: "아지몰", title: "아지", discountRate: "23%", price: "4,338,290", rate: "4.6", reviews: "710", img: Image("eren")),
-    BestItemModel(company: "키오몰", title: "키오", discountRate: "22%", price: "4,889,320", rate: "4.1", reviews: "328", img: Image("eren")),
-    BestItemModel(company: "매들린몰", title: "매들린", discountRate: "24%", price: "5,112,430", rate: "4.9", reviews: "238", img: Image("eren")),
-    BestItemModel(company: "쿵몰", title: "쿵", discountRate: "28%", price: "4,490,230", rate: "4.2", reviews: "594", img: Image("eren")),
-    BestItemModel(company: "에렌몰", title: "에렌", discountRate: "21%", price: "4,324,820", rate: "4.8", reviews: "328", img: Image("eren")),
+    BestItemModel(company: "잼몰", info: .zam, title: "잼", discountRate: "29%", price: "5,839,220", rate: "4.3", reviews: "302", img: Image("dog")),
+    BestItemModel(company: "아지몰", info: .ahzy, title: "아지", discountRate: "23%", price: "4,338,290", rate: "4.6", reviews: "710", img: Image("eren")),
+    BestItemModel(company: "키오몰", info: .kio, title: "키오", discountRate: "22%", price: "4,889,320", rate: "4.1", reviews: "328", img: Image("eren")),
+    BestItemModel(company: "매들린몰", info: .madeline, title: "매들린", discountRate: "24%", price: "5,112,430", rate: "4.9", reviews: "238", img: Image("eren")),
+    BestItemModel(company: "쿵몰", info: .koong, title: "쿵", discountRate: "28%", price: "4,490,230", rate: "4.2", reviews: "594", img: Image("eren")),
+    BestItemModel(company: "에렌몰", info: .eren, title: "에렌", discountRate: "21%", price: "4,324,820", rate: "4.8", reviews: "328", img: Image("eren")),
 ]
 
 struct SixPage: View {

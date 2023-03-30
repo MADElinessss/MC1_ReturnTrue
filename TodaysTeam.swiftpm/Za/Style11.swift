@@ -25,17 +25,21 @@ struct Style11: StyleTemplate {
                 .foregroundColor(Color.black)
                 .frame(height: 640)
             Text(title!)
-                .frame(width: UIScreen.main.bounds.width * 0.9)
+                .frame(width: UIScreen.main.bounds.width , height: 640)
                 .font(.system(size: 100, weight: .bold, design: .default))
                 .foregroundColor(.white)
                 .lineLimit(nil)
                 .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.1)
             Image(uiImage: images![0])
                 .resizable()
                 .frame(width: 640, height: 640)
         }
-
     }
 }
 
-
+struct sadlka: PreviewProvider {
+    static var previews: some View {
+        ProductDescriptionView(styles: [Style.Madeline[5]])
+    }
+}

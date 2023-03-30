@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    
+    let person: Person
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack{
-                    ProductTabView()
+                    ProductTabView(images: person.numsa)
                         .frame(height: 600)
                     ProductTitleView()
                         .frame(width: UIScreen.main.bounds.width)
-                    ProductDescriptionView(styles: Style.kio)
+                    ProductDescriptionView(styles: person.styles)
                         .padding(50)
                     Spacer()
                 }
@@ -25,11 +28,5 @@ struct ProductDetailView: View {
         }
         .navigationBarBackButtonHidden()
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-struct Style1_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductDetailView()
     }
 }

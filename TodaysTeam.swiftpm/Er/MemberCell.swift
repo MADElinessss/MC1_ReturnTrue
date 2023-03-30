@@ -18,6 +18,7 @@ struct MemberCell: View {
     var rate: String
     var reviews: String
     var img: Image
+    var info: Person
     
     
     init(item: BestItemModel){
@@ -29,16 +30,25 @@ struct MemberCell: View {
         self.rate = item.rate
         self.reviews = item.reviews
         self.img = item.img
+        self.info = item.info
     }
     
     
     var body: some View {
         VStack{
             HStack{
-                self.img
-                    .resizable()
-                    .frame(width:180, height: 180)
-                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                if info != .none {
+                    Image(uiImage: info.numsa.first!)
+                        .resizable()
+                        .frame(width:180, height: 180)
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                }
+                else {
+                   img
+                        .resizable()
+                        .frame(width:180, height: 180)
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                }
                 
                 VStack(alignment: .leading,spacing: 6) {
                     Text(self.company)
