@@ -34,7 +34,7 @@ struct FivePage: View{
                         HStack{
                             Text("총 상품금액")
                             Spacer()
-                            Text("61,800원")
+                            Text("소주 세 짝")
                                 .fontWeight(.bold)
                         }
                         .font(.system(size: 20))
@@ -42,7 +42,7 @@ struct FivePage: View{
                         HStack(alignment: .firstTextBaseline){
                             Text("총 배송비")
                             Spacer()
-                            Text("+3,000원")
+                            Text("맥주 여섯잔")
                                 .fontWeight(.bold)
                         }
                         .padding(.vertical,12)
@@ -50,7 +50,7 @@ struct FivePage: View{
                         HStack{
                             Text("총 할인금액")
                             Spacer()
-                            Text("-16.200원")
+                            Text("상쾌환 한 팩")
                                 .fontWeight(.bold)
                         }
                         .font(.system(size: 20))
@@ -61,7 +61,7 @@ struct FivePage: View{
                                 .fontWeight(.bold)
                                 .font(.system(size: 20))
                             Spacer()
-                            Text("48,600원")
+                            Text("MC2에서 만나요")
                                 .fontWeight(.bold)
                         }
                         .font(.system(size: 32))
@@ -75,7 +75,7 @@ struct FivePage: View{
                     Button{
                         isFinished = true
                     } label: {
-                        Text("3개 상품 구매하기")
+                        Text("6개 상품 구매하기")
                             .font(.system(size: 24))
                             .fontWeight(.bold)
                             .foregroundColor(.white)
