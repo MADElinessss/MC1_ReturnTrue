@@ -35,5 +35,6 @@ struct Style8: StyleTemplate {
                 .aspectRatio(contentMode: .fill)
               
         }
+        .frame(height: 470)
     }
 }

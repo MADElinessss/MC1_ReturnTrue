@@ -20,8 +20,13 @@ struct Style6: StyleTemplate {
     var subColor: Color?
 
     var body: some View {
-        Image(uiImage: images![0])
-            .resizable()
-            .scaledToFill()
+        GeometryReader { geo in
+            Image(uiImage: images![0])
+                .resizable()
+                .scaledToFill()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .clipped()
+        }
+        .frame(height: 750)
     }
 }

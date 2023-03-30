@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SetNavigaitonBar: ViewModifier {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     func body(content: Content) -> some View {
         content
         .toolbar {
@@ -33,6 +35,9 @@ struct SetNavigaitonBar: ViewModifier {
                     .font(.system(size: 25, weight: .light))
                     .imageScale(.medium)
                     .frame(width: 40, height: 40)
+                    .onTapGesture {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
             }
             ToolbarItem(placement: .navigationBarLeading) {
                 Image(systemName: "house")

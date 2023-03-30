@@ -24,6 +24,7 @@ struct Style1: StyleTemplate {
             Image(uiImage: images![0])
                 .resizable()
                 .scaledToFill()
+                .frame(width: UIScreen.main.bounds.width)
             VStack {
                 Rectangle()
                     .foregroundColor(.clear)
@@ -48,5 +49,6 @@ struct Style1: StyleTemplate {
 
             }
         }
+        .frame(width: UIScreen.main.bounds.width, height: 1024)
     }
 }

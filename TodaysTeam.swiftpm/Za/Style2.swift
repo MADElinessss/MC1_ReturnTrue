@@ -34,5 +34,6 @@ struct Style2: StyleTemplate {
                 .lineLimit(nil)
                 .multilineTextAlignment(.center)
         }
+        .frame(height: 520)
     }
 }

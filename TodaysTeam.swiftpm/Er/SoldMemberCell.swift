@@ -40,7 +40,7 @@ struct SoldMemberCell: View {
                 Text("결제완료")
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(Color.green)
-                Text(self.price + "원")
+                Text(self.price)
                     .font(.system(size: 20, weight: .semibold))
             }
         }

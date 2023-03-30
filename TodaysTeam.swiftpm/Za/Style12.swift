@@ -20,35 +20,37 @@ struct Style12: StyleTemplate {
     var subColor: Color?
     
     var body: some View {
-        HStack {
-            Spacer()
-            Image(uiImage: images![0])
-                .resizable()
-                .scaledToFill()
-                .frame(width: 520, height: 640)
-                .mask({
-                    Rectangle()
-                        .frame(width: 520, height: 640)
-                        .cornerRadius(4)
-                })
-            Spacer()
-            Image(uiImage: images![0])
-                .resizable()
-                .scaledToFill()
-                .frame(width: 320, height: 340)
-                .mask({
-                    Rectangle()
-                        .frame(width: 320, height: 340)
-                        .cornerRadius(4)
-                    
-                })
-            Spacer()
+        GeometryReader { proxy in
+            HStack {
+                Spacer()
+                Image(uiImage: images![0])
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: proxy.size.width / 2, height: 640)
+                    .mask({
+                        Rectangle()
+                            .frame(width: proxy.size.width / 2, height: 640)
+                            .cornerRadius(4)
+                    })
+                Spacer()
+                VStack {
+                    Spacer()
+                        
+                    Image(uiImage: images![0])
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: proxy.size.width / 3, height: proxy.size.width / 3)
+                        .mask({
+                            Rectangle()
+                                .frame(width: proxy.size.width / 3, height: proxy.size.width / 3)
+                                .cornerRadius(4)
+                        })
+                    Spacer()
+                        .frame(maxHeight: 140)
+                }
+                Spacer()
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 750)
         }
-    }
-}
-
-struct preview12: PreviewProvider {
-    static var previews: some View {
-        Style12()
     }
 }

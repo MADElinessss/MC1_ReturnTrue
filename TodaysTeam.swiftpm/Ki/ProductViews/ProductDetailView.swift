@@ -13,9 +13,12 @@ struct ProductDetailView: View {
             ScrollView {
                 VStack{
                     ProductTabView()
+                        .frame(height: 600)
                     ProductTitleView()
+                        .frame(width: UIScreen.main.bounds.width)
+                    ProductDescriptionView(styles: Style.kio)
+                        .padding(50)
                     Spacer()
-                    ProductDescriptionView(styles: [.style3, .style5, .style6, .style7, .style9, .style10, .style13])
                 }
             }
             .modifier(SetNavigaitonBar())

@@ -31,6 +31,7 @@ struct Style14: StyleTemplate {
                         .frame(height: 720)
                     
                 })
+                .frame(width: UIScreen.main.bounds.width ,height: 720)
             Image(uiImage: images![0])
                 .resizable()
                 .scaledToFill()
@@ -40,11 +41,12 @@ struct Style14: StyleTemplate {
                         .frame(width: 500, height: 500)
                 })
         }
+        .frame(width: UIScreen.main.bounds.width ,height: 720)
     }
 }
 
-struct preview14: PreviewProvider {
+struct preview_style1: PreviewProvider {
     static var previews: some View {
-        Style14()
+        Style14(images: [UIImage(named: "Style4_1")!,UIImage(named: "Style4_2")!,UIImage(named: "Style4_3")!], title: "안녕하세요", subTitle: "반갑습니다")
     }
 }

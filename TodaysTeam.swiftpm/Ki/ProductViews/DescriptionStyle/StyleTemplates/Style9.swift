@@ -21,13 +21,19 @@ struct Style9: StyleTemplate {
 
     var body: some View {
         HStack {
+            Spacer()
+                .frame(maxWidth: 110)
             Image(uiImage: images![0])
                 .resizable()
                 .scaledToFill()
+                .frame(width: 300, height: 300)
+                .clipped()
                 .mask {
                     Circle()
                         .frame(width: 300, height: 300)
                 }
+            Spacer()
+                .frame(minWidth: 10, maxWidth: 100)
             VStack {
                 Text(title!)
                     .font(.system(size: 30, weight: .bold, design: .default))
@@ -36,9 +42,10 @@ struct Style9: StyleTemplate {
                     .font(.system(size: 15, weight: .regular, design: .default))
                     .multilineTextAlignment(.center)
             }
-          
+          Spacer()
+                
         }
-        .padding(.leading, 60)
-        .padding(.trailing, 120)
+        .frame(height: 570)
     }
 }
+
