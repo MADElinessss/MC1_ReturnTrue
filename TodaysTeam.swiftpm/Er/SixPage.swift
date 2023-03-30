@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+
+
+
 struct SixPage: View {
     
     var body: some View {
@@ -64,13 +67,15 @@ struct SixPage: View {
                 
                 VStack{
                     HStack(alignment: .center, spacing: 4) {
-                        Image("dog")
+                        Image("soju")
                             .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .frame(width:80, height:80)
                             .clipShape(Circle())
+                            .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color.gamLightGray1, lineWidth: 2))
                             .padding()
                         
-                        Text("98도씨")
+                        Text("리턴트루 꿀조합")
                             .font(.system(size: 32, weight: .semibold))
                         Spacer()
                         Button{} label: {
@@ -89,7 +94,7 @@ struct SixPage: View {
                     
                     Group{
                         ForEach(items) { ele in
-                            SoldMemberCell(item: ele)
+                            SoldMemberCell(item: ele, img: ele.bbororoImg)
                         }
                     }
                 }

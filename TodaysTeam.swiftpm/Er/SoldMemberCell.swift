@@ -13,18 +13,18 @@ struct SoldMemberCell: View {
     var price: String
     var img: Image
     
-    init(item: BestItemModel) {
+    init(item: BestItemModel, img: Image) {
         self.item = item
         self.title = item.title
         self.price = item.price
-        self.img = item.img
+        self.img = img
     }
     
     var body: some View {
         HStack {
             self.img
                 .resizable()
-                .aspectRatio(contentMode: .fill)
+                .scaledToFit()
                 .frame(width:100, height:100)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             VStack(alignment: .leading) {
