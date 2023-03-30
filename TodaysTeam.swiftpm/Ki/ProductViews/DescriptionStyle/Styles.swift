@@ -13,7 +13,7 @@ enum Style: Identifiable {
     case style2(image: String, title: String)
     case style3(image: String)
     case style4(image: [String])
-    case style5(title: String, subtTitle: String)
+    case style5(title: String, subTitle: String)
     case style6(image: String)
     case style7(title: String)
     case style8(image: String, title: String, subTitle: String)

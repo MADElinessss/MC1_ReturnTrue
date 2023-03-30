@@ -1,22 +1,6 @@
 {
   "images" : [
-    {
-<<<<<<<< HEAD:TodaysTeam.swiftpm/Asset.xcassets/zam_2_2.imageset/Contents.json
-      "filename" : "zam_2_2.jpg",
-========
-      "filename" : "8B03F98A-8CDE-4955-9F61-55EE7A7D487A_1_201_a.jpeg",
->>>>>>>> d254e5a75edddc2850fcec7f62c2744adea99137:TodaysTeam.swiftpm/Asset.xcassets/Ki/kio1.imageset/Contents.json
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
-    }
+
   ],
   "info" : {
     "author" : "xcode",

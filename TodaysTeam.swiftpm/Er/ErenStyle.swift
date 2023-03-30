@@ -14,6 +14,6 @@ extension Style {
         .style3(image: "eren_jeju"),
         .style14(image: "eren_asan"),
         .style4(image: ["eren_flower1", "eren_flower2", "eren_flower3"]),
-        .style5(title: "낯을 조금 가려요", subtTitle: "저도 다가가려고 노력할게요\n우리 조금씩 친해져요 :)")
+        .style5(title: "낯을 조금 가려요", subTitle: "저도 다가가려고 노력할게요\n우리 조금씩 친해져요 :)")
     ]
 }
