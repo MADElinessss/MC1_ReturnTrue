@@ -24,6 +24,7 @@ struct SoldMemberCell: View {
         HStack {
             self.img
                 .resizable()
+                .aspectRatio(contentMode: .fill)
                 .frame(width:100, height:100)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             VStack(alignment: .leading) {
