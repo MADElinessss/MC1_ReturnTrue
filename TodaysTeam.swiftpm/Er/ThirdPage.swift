@@ -31,9 +31,12 @@ struct BestItemModel : Identifiable {
     var price: String
     var rate: String
     var reviews: String
+    var field: String
+    
+    var bbororoImg: Image
     
     
-    init(company: String, info: Person, title: String, discountRate: String, price: String, rate: String, reviews: String, img: Image) {
+    init(company: String, info: Person, title: String, discountRate: String, price: String, rate: String, reviews: String, img: Image, field: String, bbororoImg: Image) {
         self.company = company
         self.title = title
         self.discountRate = discountRate
@@ -42,21 +45,20 @@ struct BestItemModel : Identifiable {
         self.reviews = reviews
         self.img = img
         self.info = info
+        self.field = field
+        
+        self.bbororoImg = bbororoImg
     }
 }
 
 
 let items: [BestItemModel] = [
-    BestItemModel(company: "잼몰", info: .zam, title: "잼", discountRate: "29%", price: "5,839,220", rate: "4.3", reviews: "302", img: Image("dog")),
-    BestItemModel(company: "아지몰", info: .ahzy, title: "아지", discountRate: "23%", price: "4,338,290", rate: "4.6", reviews: "710", img: Image("eren")),
-    //BestItemModel(company: "사람인", info: .none, title: "자바러", discountRate: "20%", price: "988,220", rate: "4.8", reviews: "328", img: Image(systemName: "person")),
-    BestItemModel(company: "키오몰", info: .kio, title: "키오", discountRate: "22%", price: "4,889,320", rate: "4.1", reviews: "328", img: Image("eren")),
-    BestItemModel(company: "매들린몰", info: .madeline, title: "매들린", discountRate: "24%", price: "5,112,430", rate: "4.9", reviews: "238", img: Image("eren")),
-   // BestItemModel(company: "에브리타임", info: .none, title: "애플지원자", discountRate: "20%", price: "838,330", rate: "4.8", reviews: "328", img: Image(systemName: "person")),
-    BestItemModel(company: "쿵몰", info: .koong, title: "쿵", discountRate: "28%", price: "4,490,230", rate: "4.2", reviews: "594", img: Image("eren")),
-    //estItemModel(company: "링크드인", info: .none, title: "백엔드1년차", discountRate: "20%", price: "322,790", rate: "4.8", reviews: "328", img: Image(systemName: "person")),
-    BestItemModel(company: "에렌몰", info: .eren, title: "에렌", discountRate: "21%", price: "4,324,820", rate: "4.8", reviews: "328", img: Image("eren")),
-    
+    BestItemModel(company: "잼몰", info: .zam, title: "살다살다 이렇게 메모하는사람 처음봄 쨈", discountRate: "63%", price: "라멘 베라보", rate: "4.3", reviews: "302", img: Image("dog"), field: "디자인", bbororoImg: Image("zam_bbororo")),
+    BestItemModel(company: "아지몰", info: .ahzy, title: "★[AZHY]★당충전스윗F남✓ ★대구풀코스★획득기회@@", discountRate: "10%", price: "콜로세움 테라 500cc 2잔", rate: "4.6", reviews: "710", img: Image("eren"), field: "개발", bbororoImg: Image("azhy_bbororo")),
+BestItemModel(company: "키오몰", info: .kio, title: "MC2 찢는 래퍼출신 개크리더 키오", discountRate: "99%", price: "에비앙", rate: "4.1", reviews: "328", img: Image("eren"), field: "개발", bbororoImg: Image("kio_bbororo")),
+    BestItemModel(company: "매들린몰", info: .madeline, title: "눈치 100 영어 통역관 마들렌 아니고 매들린", discountRate: "38%", price: "효자동 쌀국수 식사 1번", rate: "4.9", reviews: "238", img: Image("eren"), field: "개발", bbororoImg: Image("mad_bbororo")),
+    BestItemModel(company: "쿵몰", info: .koong, title: "맑눈광 교환환불X 쿵 예뻐해주세요]", discountRate: "0.1%", price: "소주 한 잔", rate: "4.2", reviews: "594", img: Image("eren"), field: "도메인", bbororoImg: Image("koong_bbororo")),
+    BestItemModel(company: "에렌몰", info: .eren, title: "순정남 스윗가이와 달데를, 진짜웃음추출가능", discountRate: "55%", price: "에렌과 일일데이트권", rate: "4.8", reviews: "328", img: Image("eren"), field: "개발", bbororoImg: Image("eren_bbororo")),
 ]
 
 struct ThirdPage: View {

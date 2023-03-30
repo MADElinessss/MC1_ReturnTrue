@@ -49,37 +49,47 @@ struct MemberCell: View {
                         .frame(width:180, height: 180)
                         .clipShape(RoundedRectangle(cornerRadius: 6))
                 }
+                /*
+                self.img
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width:180, height: 180)
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                */
                 
                 VStack(alignment: .leading,spacing: 6) {
                     Text(self.company)
                         .font(.system(size: 18))
                         .foregroundColor(Color.gamDarkGray0)
-                    Text("[한정수량] " + self.title)
-                        .font(.system(size: 22))
+                    Text(self.title)
+                        .font(.system(size: 32, weight: .bold))
                     HStack{
                         Text(self.discountRate + " ")
-                            .font(.system(size: 36, weight: .bold))
+                            .font(.system(size: 24, weight: .medium))
                             .foregroundColor(Color.mainColor)
                         Text(self.price)
-                            .font(.system(size: 36, weight: .bold))
+                            .font(.system(size: 24, weight: .medium))
+                            .multilineTextAlignment(.leading)
                     }
                     HStack( alignment: .center, spacing: 0){
                         Image(systemName: "star")
                             .padding(.bottom, 4)
-                        Text(self.rate + " ")
+                        Text(self.rate)
                             .font(.system(size: 16, weight: .bold))
                         Text("리뷰" + self.reviews)
                             .font(.system(size: 16, weight: .medium))
                             .foregroundColor(Color.gamDarkGray0)
+                            .padding(.leading, 4)
                     }
                     HStack{
                         Text("무료배송")
+                            .foregroundColor(Color.gamDarkGray1)
                             .padding(5)
                             .background(RoundedRectangle(cornerRadius: 6).fill(Color.gamLightGray1))
                         Text("특가")
                             .foregroundColor(Color.gamBgWhite)
                             .padding(5)
-                            .background(RoundedRectangle(cornerRadius: 6).fill(.red.opacity(0.5)))
+                            .background(RoundedRectangle(cornerRadius: 6).fill(Color.accentColor))
                     }
                 }
                 .padding(.leading, 16)

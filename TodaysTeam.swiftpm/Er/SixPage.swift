@@ -7,14 +7,7 @@
 
 import SwiftUI
 
-let SoldMemberItem: [BestItemModel] = [
-    BestItemModel(company: "잼몰", info: .zam, title: "잼", discountRate: "29%", price: "5,839,220", rate: "4.3", reviews: "302", img: Image("dog")),
-    BestItemModel(company: "아지몰", info: .ahzy, title: "아지", discountRate: "23%", price: "4,338,290", rate: "4.6", reviews: "710", img: Image("eren")),
-    BestItemModel(company: "키오몰", info: .kio, title: "키오", discountRate: "22%", price: "4,889,320", rate: "4.1", reviews: "328", img: Image("eren")),
-    BestItemModel(company: "매들린몰", info: .madeline, title: "매들린", discountRate: "24%", price: "5,112,430", rate: "4.9", reviews: "238", img: Image("eren")),
-    BestItemModel(company: "쿵몰", info: .koong, title: "쿵", discountRate: "28%", price: "4,490,230", rate: "4.2", reviews: "594", img: Image("eren")),
-    BestItemModel(company: "에렌몰", info: .eren, title: "에렌", discountRate: "21%", price: "4,324,820", rate: "4.8", reviews: "328", img: Image("eren")),
-]
+
 
 struct SixPage: View {
     
@@ -74,13 +67,15 @@ struct SixPage: View {
                 
                 VStack{
                     HStack(alignment: .center, spacing: 4) {
-                        Image("dog")
+                        Image("soju")
                             .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .frame(width:80, height:80)
                             .clipShape(Circle())
+                            .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color.gamLightGray1, lineWidth: 2))
                             .padding()
                         
-                        Text("98도씨")
+                        Text("리턴트루 꿀조합")
                             .font(.system(size: 32, weight: .semibold))
                         Spacer()
                         Button{} label: {
@@ -98,8 +93,8 @@ struct SixPage: View {
                         .padding([.top, .bottom])
                     
                     Group{
-                        ForEach(SoldMemberItem) { ele in
-                            SoldMemberCell(item: ele)
+                        ForEach(items) { ele in
+                            SoldMemberCell(item: ele, img: ele.bbororoImg)
                         }
                     }
                 }

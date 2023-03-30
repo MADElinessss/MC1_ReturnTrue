@@ -17,15 +17,15 @@ struct leftRectangle : View {
     var img: Image
     var company: String?
     var deliveryFee: String
-    var personColor: String?
+    var field: String
     
-    init(member: BestItemModel, deliveryFee: String = "3000원", personColor: String = "블루") {
+    init(member: BestItemModel, deliveryFee: String = "3000원") {
         self.member = member
         self.title = member.title
         self.price = member.price
         self.img = member.img
         self.company = member.company
-        self.personColor = personColor
+        self.field = member.field
         self.deliveryFee = deliveryFee
         self.isChecked = true
     }
@@ -36,7 +36,7 @@ struct leftRectangle : View {
         VStack{
             VStack{
                 //Spacer()
-                Text(self.company ?? "ibizashop 배송")
+                Text("ReturnTrue팀 배송")
                 // 어떨때는 . , :
                     .font(.system(size: 20, weight: .medium, design: .default))
                     .padding(.top,12.0)
@@ -62,9 +62,9 @@ struct leftRectangle : View {
                     HStack(alignment:.top){
                         self.img
                             .resizable()
-                            .scaledToFit()
-                            .frame(height: 150)
-                            .cornerRadius(10)
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width:150, height:150)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
                         
                         Text(self.title ?? "[ibiza] \n접이식빨래 양말건조대")
                             .fixedSize(horizontal: false, vertical: true)
@@ -85,7 +85,7 @@ struct leftRectangle : View {
                     VStack{
                         VStack(spacing: 15){
                             HStack{
-                                Text(self.personColor ?? "화이트")
+                                Text(self.field)
                                     .font(.system(size: 20))
                                 Spacer()
                                 Image(systemName: "xmark")
@@ -101,7 +101,7 @@ struct leftRectangle : View {
                             }
                         }
                         .padding()
-                        .background(Color.gamLightGray0)
+                        .background(RoundedRectangle(cornerRadius: 4).fill(Color.gamLightGray0))
                         
                         HStack{
                             Text("옵션변경")
