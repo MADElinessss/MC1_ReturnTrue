@@ -60,7 +60,7 @@ extension Person {
         case .zam:
             return Style.zam
         default:
-            return Style.kio
+            return Style.koong
         }
     }
     
@@ -77,7 +77,7 @@ extension Person {
         case .zam:
             return [UIImage(named: "z1")!,UIImage(named: "z2")!,UIImage(named: "z3")!]
         default:
-            return [UIImage(named: "m1")!,UIImage(named: "m3")!,UIImage(named: "m2")!]
+            return [UIImage(named: "ko1")!,UIImage(named: "ko2")!,UIImage(named: "ko3")!]
         }
     }
 }

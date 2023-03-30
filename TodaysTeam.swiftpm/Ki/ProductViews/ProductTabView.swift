@@ -14,36 +14,27 @@ struct ProductTabView: View {
     let images: [UIImage]
     @State var currentIndex: Int = 0
     var temp = 3
-//    let player: AVPlayer = {
-//        let temp = URL(string: "http://동영상주소.com")!
-//       // let url = URL(filePath: "/Users/changgyoseo/Projects/MC1_act2/TodaysTeam.swiftpm/Ki/Dance.mp4")
-////        if #available(iOS 16.0, *) {
-////            guard let url = URL(filePath: "/Users/changgyoseo/Projects/MC1_act2/TodaysTeam.swiftpm/Ki/Dance.mp4") else {
-////                fatalError("Failed to find video file.")
-////            }
-//        //}
-//    
-//        return AVPlayer(url: temp)
-//    }()
     var b: Bool = false
     
     var body: some View {
-//        if b {
-//            VideoPlayerView(player: player)
-//        }
-//        else {
+
             TabView {
                 ForEach(0..<temp) { i in
-                    Image(uiImage: images[i])
-                        .clipShape(Rectangle())
-                        .overlay {
-                            GeometryReader { proxy -> Color in
-                                let minX = proxy.frame(in: .global).minX
-                                self.currentIndex = getIndex(-minX)
-                                
-                                return Color.clear
+                    if b && i == 0 {
+                        AVPlayerView(player: AVPlayer(url: Bundle.main.url(forResource: "Dance", withExtension: "mp4")!))
+                    }
+                    if temp != 4 {
+                        Image(uiImage: images[i])
+                            .clipShape(Rectangle())
+                            .overlay {
+                                GeometryReader { proxy -> Color in
+                                    let minX = proxy.frame(in: .global).minX
+                                    self.currentIndex = getIndex(-minX)
+                                    
+                                    return Color.clear
+                                }
                             }
-                        }
+                    }
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: 1000)
@@ -64,7 +55,6 @@ struct ProductTabView: View {
             }
             .frame(height: 600)
             .clipped()
-      //  }
     }
 }
 

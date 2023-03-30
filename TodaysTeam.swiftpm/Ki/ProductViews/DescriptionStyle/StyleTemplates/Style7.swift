@@ -21,6 +21,7 @@ struct Style7: StyleTemplate {
 
     var body: some View {
         Text(title!)
+            .minimumScaleFactor(0.3)
             .multilineTextAlignment(.center)
             .font(.system(size: 60, weight: .regular))
             .minimumScaleFactor(0.5)

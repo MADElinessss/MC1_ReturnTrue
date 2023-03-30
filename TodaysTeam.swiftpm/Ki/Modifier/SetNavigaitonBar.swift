@@ -50,3 +50,9 @@ struct SetNavigaitonBar: ViewModifier {
     }
     
 }
+
+struct dummy: View{
+    var body: some View {
+        Text("s")
+    }
+}

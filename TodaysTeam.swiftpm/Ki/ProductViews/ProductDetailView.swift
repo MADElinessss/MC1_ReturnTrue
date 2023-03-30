@@ -17,7 +17,8 @@ struct ProductDetailView: View {
             ScrollView {
                 VStack{
                     let b = person == .ahzy ? true : false
-                    ProductTabView(images: person.numsa, b: b)
+                    let t = b ? 4 : 3
+                    ProductTabView(images: person.numsa, temp: t, b: b)
                         .frame(height: 600)
                     ProductTitleView(info: person.info)
                         .frame(width: UIScreen.main.bounds.width)

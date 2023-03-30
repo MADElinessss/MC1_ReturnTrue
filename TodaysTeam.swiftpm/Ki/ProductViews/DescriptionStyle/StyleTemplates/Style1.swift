@@ -42,6 +42,7 @@ struct Style1: StyleTemplate {
                         Text(title!)
                             .padding(100)
                             .font(.system(size: 48, weight: .regular, design: .rounded))
+                            .minimumScaleFactor(0.3)
                     }
                     .layoutPriority(1)
                 }

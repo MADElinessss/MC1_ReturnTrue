@@ -6,48 +6,23 @@
 //
 
 import SwiftUI
-import AVFoundation
+import AVKit
 
-struct dummy: View {
+struct AVPlayerView: UIViewControllerRepresentable {
+    typealias UIViewControllerType = AVPlayerViewController
     
-    let fileURL = URL(string: "https://www.youtube.com/watch?v=0Kxpm8sgZsM")!
-        let player: AVPlayer
-        init() {
-            player = AVPlayer(url: fileURL)
-        }
+    var player: AVPlayer
     
-        var body: some View {
-            VideoPlayerView(player: player)
-                .edgesIgnoringSafeArea(.all)
-        }
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        player.play() // Play the video as soon as the view is initialized
+        return playerViewController
+    }
+    
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
+        // Update the AVPlayerViewController with any changes to the AVPlayer instance
+        uiViewController.player = player
+    }
 }
-//
-//struct VideoPlayerView: UIViewRepresentable {
-//    let player: AVPlayer
-//
-//    func makeUIView(context: UIViewRepresentableContext<VideoPlayerView>) -> UIView {
-//        let videoLayer = AVPlayerLayer(player: player)
-//        let view = UIView()
-//        view.layer.addSublayer(videoLayer)
-//        videoLayer.frame = view.bounds
-//        return view
-//    }
-//
-//    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<VideoPlayerView>) {
-//        // No need to do anything here for this example
-//    }
-//}
-//
-//struct ContentView: View {
-//    let fileURL = URL(fileURLWithPath: "/Users/YourUsername/Documents/myVideo.mp4")
-//    let player: AVPlayer
-//    init() {
-//        player = AVPlayer(url: fileURL)
-//    }
-//
-//    var body: some View {
-//
-//        VideoPlayerView(player: player)
-//            .edgesIgnoringSafeArea(.all)
-//    }
-//}
+
