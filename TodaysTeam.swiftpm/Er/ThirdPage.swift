@@ -45,6 +45,7 @@ struct BestItemModel : Identifiable {
     }
 }
 
+
 let items: [BestItemModel] = [
     BestItemModel(company: "잼몰", info: .zam, title: "잼", discountRate: "29%", price: "5,839,220", rate: "4.3", reviews: "302", img: Image("dog")),
     BestItemModel(company: "아지몰", info: .ahzy, title: "아지", discountRate: "23%", price: "4,338,290", rate: "4.6", reviews: "710", img: Image("eren")),

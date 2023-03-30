@@ -27,37 +27,8 @@ enum Style: Identifiable {
 
 extension Style {
     
-    var id: Int {
-        switch self {
-        case .style1:
-            return 1
-        case .style2:
-            return 2
-        case .style3:
-            return 3
-        case .style4:
-            return 4
-        case .style5:
-            return 5
-        case .style6:
-            return 6
-        case .style7:
-            return 7
-        case .style8:
-            return 8
-        case .style9:
-            return 9
-        case .style10:
-            return 10
-        case .style11:
-            return 11
-        case .style12:
-            return 12
-        case .style13:
-            return 13
-        case .style14:
-            return 14
-        }
+    var id: String {
+        return NSUUID().uuidString
     }
     
     @ViewBuilder

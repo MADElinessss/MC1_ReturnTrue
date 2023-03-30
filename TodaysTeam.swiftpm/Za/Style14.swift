@@ -45,8 +45,4 @@ struct Style14: StyleTemplate {
     }
 }
 
-struct preview_style1: PreviewProvider {
-    static var previews: some View {
-        Style14(images: [UIImage(named: "Style4_1")!,UIImage(named: "Style4_2")!,UIImage(named: "Style4_3")!], title: "안녕하세요", subTitle: "반갑습니다")
-    }
-}
+

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ProductDetailView: View {
     
     let person: Person
@@ -15,16 +16,19 @@ struct ProductDetailView: View {
         NavigationView {
             ScrollView {
                 VStack{
-                    ProductTabView(images: person.numsa)
+                    let b = person == .ahzy ? true : false
+                    ProductTabView(images: person.numsa, b: b)
                         .frame(height: 600)
-                    ProductTitleView()
+                    ProductTitleView(info: person.info)
                         .frame(width: UIScreen.main.bounds.width)
                     ProductDescriptionView(styles: person.styles)
-                        .padding(50)
+                        .frame(width: UIScreen.main.bounds.width)
+                      
                     Spacer()
                 }
             }
             .modifier(SetNavigaitonBar())
+            
         }
         .navigationBarBackButtonHidden()
         .navigationViewStyle(StackNavigationViewStyle())

@@ -53,3 +53,5 @@ struct Style1: StyleTemplate {
         .frame(width: UIScreen.main.bounds.width, height: 1024)
     }
 }
+
+

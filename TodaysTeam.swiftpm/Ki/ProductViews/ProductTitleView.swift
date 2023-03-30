@@ -9,19 +9,17 @@ import SwiftUI
 
 struct ProductTitleView: View {
     
-        var brandName: String = "프리메이드"
-        var productName: String = "원형 티 카페 테이블 2size"
-        var discountPercent: Int = 50
-        var price: Int = 10
+        
+    var info: Person.Info
     
     var body: some View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text(brandName)
+                    Text(info.brandName)
                         .font(.system(size: 24, weight: .regular, design: .rounded))
                         .foregroundColor(.gamDarkGray1)
-                    Text(productName)
+                    Text(info.productName)
                         .font(.system(size: 36, weight: .regular, design: .rounded))
                         .foregroundColor(.gamBasicBlack)
                     HStack {
@@ -37,10 +35,10 @@ struct ProductTitleView: View {
             }
             Rectangle().frame(height: 20).foregroundColor(.clear)
             HStack {
-                Text("\(discountPercent)%")
+                Text("\(info.discountPercent)")
                     .font(.system(size: 24, weight: .regular, design: .rounded))
                     .foregroundColor(.gamDarkGray0)
-                Text("1,000,000,000,000원")
+                Text(info.price)
                     .font(.system(size: 24, weight: .regular, design: .rounded))
                     .foregroundColor(.gamLightGray2)
                     .strikethrough()
@@ -48,7 +46,7 @@ struct ProductTitleView: View {
             }
             Spacer()
             HStack {
-                Text("\(price)원")
+                Text(info.price)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                 Spacer()
             }

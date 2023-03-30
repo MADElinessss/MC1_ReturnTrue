@@ -24,3 +24,4 @@ struct ProductDescriptionView: View {
         style.view
     }
 }
+
