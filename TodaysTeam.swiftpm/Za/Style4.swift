@@ -19,27 +19,30 @@ struct Style4: StyleTemplate {
     var subColor: Color?
     
     var body: some View {
-        HStack{
-            Spacer()
-            Image(uiImage: images![0])
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 280)
-                .clipShape(Circle())
-            Spacer()
-            Image(uiImage: images![1])
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 280)
-                .clipShape(Circle())
-            Spacer()
-            Image(uiImage: images![2])
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 280)
-                .clipShape(Circle())
-            Spacer()
+        GeometryReader { proxy in
+            HStack{
+                Spacer()
+                Image(uiImage: images![0])
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: proxy.size.width / 3.5)
+                    .clipShape(Circle())
+                Spacer()
+                Image(uiImage: images![1])
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: proxy.size.width / 3.5)
+                    .clipShape(Circle())
+                Spacer()
+                Image(uiImage: images![2])
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: proxy.size.width / 3.5)
+                    .clipShape(Circle())
+                Spacer()
+            }
         }
-        //.padding(24)
+        .frame(width: UIScreen.main.bounds.width, height: 390)
     }
 }
+

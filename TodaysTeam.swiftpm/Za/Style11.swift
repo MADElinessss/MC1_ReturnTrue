@@ -32,8 +32,10 @@ struct Style11: StyleTemplate {
                 .multilineTextAlignment(.center)
             Image(uiImage: images![0])
                 .resizable()
-                .frame(height: 640)
+                .frame(width: 640, height: 640)
         }
 
     }
 }
+
+

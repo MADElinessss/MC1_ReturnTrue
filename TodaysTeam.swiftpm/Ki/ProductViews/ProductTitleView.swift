@@ -9,34 +9,38 @@ import SwiftUI
 
 struct ProductTitleView: View {
     
-    //    var brandName: String
-    //    var productName: String
-    //    var starsCount: Int
-    //    var reviewCount: Int
-    //    var price: Int
+        var brandName: String = "프리메이드"
+        var productName: String = "원형 티 카페 테이블 2size"
+        var discountPercent: Int = 50
+        var price: Int = 10
     
     var body: some View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("프리메이드")
+                    Text(brandName)
                         .font(.system(size: 24, weight: .regular, design: .rounded))
                         .foregroundColor(.gamDarkGray1)
-                    Text("원형 티 카페 테이블 2size")
+                    Text(productName)
                         .font(.system(size: 36, weight: .regular, design: .rounded))
                         .foregroundColor(.gamBasicBlack)
+                    HStack {
+                        Text("⭐️⭐️⭐️⭐️⭐️")
+                        Text("1,234")
+                    }
                 }
+               
                 Spacer()
                 Image(systemName: "square.and.arrow.up")
                     .resizable()
                     .frame(width: 30, height: 30)
-               
             }
+            Rectangle().frame(height: 20).foregroundColor(.clear)
             HStack {
-                Text("38%")
+                Text("\(discountPercent)%")
                     .font(.system(size: 24, weight: .regular, design: .rounded))
                     .foregroundColor(.gamDarkGray0)
-                Text("60000")
+                Text("1,000,000,000,000원")
                     .font(.system(size: 24, weight: .regular, design: .rounded))
                     .foregroundColor(.gamLightGray2)
                     .strikethrough()
@@ -44,12 +48,12 @@ struct ProductTitleView: View {
             }
             Spacer()
             HStack {
-                Text("36,900원")
+                Text("\(price)원")
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                 Spacer()
             }
         }
-        .padding(32)
-        
+        .padding(.leading,40)
+        .padding(.trailing,40)
     }
 }

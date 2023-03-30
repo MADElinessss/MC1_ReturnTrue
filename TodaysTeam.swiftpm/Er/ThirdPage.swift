@@ -95,7 +95,10 @@ struct ThirdPage: View {
                 
                 ScrollView{
                     ForEach(items) { ele in
-                        MemberCell(item: ele)
+                        NavigationLink(destination:  ProductDetailView()) {
+                            MemberCell(item: ele)
+                        }
+                        .foregroundColor(.black)
                     }
                 }
                 

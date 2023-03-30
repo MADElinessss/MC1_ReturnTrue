@@ -43,8 +43,10 @@ struct ProductTabView: View {
                         .foregroundColor(.gamBgWhite)
                 }
             }
+            .frame(height: 550)
             .padding(24)
         }
+        .frame(height: 600)
         .clipped()
     }
 }
@@ -53,5 +55,12 @@ extension ProductTabView {
     
     func getIndex(_ currentOffet: CGFloat) -> Int {
         return Int(round(Double(currentOffet / UIScreen.main.bounds.width)))
+    }
+}
+
+
+struct previewr: PreviewProvider {
+    static var previews: some View {
+        ProductDetailView()
     }
 }

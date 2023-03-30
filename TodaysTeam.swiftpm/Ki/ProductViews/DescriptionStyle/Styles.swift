@@ -50,13 +50,13 @@ extension Style {
         case .style10:
             return 10
         case .style11:
-            return 10
+            return 11
         case .style12:
-            return 10
+            return 12
         case .style13:
-            return 10
+            return 13
         case .style14:
-            return 10
+            return 14
         }
     }
     

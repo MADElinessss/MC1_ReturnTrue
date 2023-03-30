@@ -29,11 +29,7 @@ struct Style5: StyleTemplate {
                 .multilineTextAlignment(.center)
         }
         .padding(100)
+        .frame(width: UIScreen.main.bounds.width, height: 350)
     }
 }
 
-struct prpr: PreviewProvider {
-    static var previews: some View {
-        Style3()
-    }
-}

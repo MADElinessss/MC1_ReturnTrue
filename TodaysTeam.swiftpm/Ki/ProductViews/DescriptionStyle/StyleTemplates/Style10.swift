@@ -28,5 +28,6 @@ struct Style10: StyleTemplate {
                 .font(.system(size: 60, weight: .regular, design: .default))
                 .multilineTextAlignment(.center)
         }
+        .frame(width: UIScreen.main.bounds.width, height: 350)
     }
 }

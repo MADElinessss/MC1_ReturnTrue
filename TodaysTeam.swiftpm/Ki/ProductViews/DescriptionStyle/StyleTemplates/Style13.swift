@@ -23,5 +23,6 @@ struct Style13: StyleTemplate {
         Text(title!)
             .font(.system(size: 60, weight: .bold, design: .default))
             .multilineTextAlignment(.center)
+            .frame(height: 550)
     }
 }
