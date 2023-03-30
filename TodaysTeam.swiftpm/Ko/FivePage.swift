@@ -92,7 +92,6 @@ struct FivePage: View{
                 .padding()
             }
             .background(Color.gamLightGray0)
-            .edgesIgnoringSafeArea(.all)
         }
     }
 }

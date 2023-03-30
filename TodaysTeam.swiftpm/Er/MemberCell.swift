@@ -40,13 +40,16 @@ struct MemberCell: View {
                 if info != .none {
                     Image(uiImage: info.numsa.first!)
                         .resizable()
+                        .aspectRatio(contentMode: .fill)
                         .frame(width:180, height: 180)
                         .clipShape(RoundedRectangle(cornerRadius: 6))
                 }
                 else {
                    img
                         .resizable()
+                        .aspectRatio(contentMode: .fill)
                         .frame(width:180, height: 180)
+                        .aspectRatio(contentMode: .fill)
                         .clipShape(RoundedRectangle(cornerRadius: 6))
                 }
                 /*
