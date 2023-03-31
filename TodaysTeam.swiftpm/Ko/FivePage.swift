@@ -88,7 +88,7 @@ struct FivePage: View{
                     
                     Spacer()
                 }
-                .frame(width: 400)
+                .frame(width:  400 * (UIScreen.main.bounds.width / 1024))
                 .padding()
             }
             .background(Color.gamLightGray0)
