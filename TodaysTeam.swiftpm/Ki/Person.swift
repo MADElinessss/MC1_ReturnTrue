@@ -31,17 +31,17 @@ extension Person {
     var info: Info {
         switch self {
         case .madeline:
-            return Info(brandName: "서울시 강동구 천호동", productName: "마들렌 아니고 매들린입니다.", discountPercent: "0%", before: "950,000원", price: "효자동 쌀국수 식사 1번")
+            return Info(brandName: "서울시 강동구 천호동", productName: "눈치 100 영어 통역관 마들렌 아니고 매들린", discountPercent: "38%", before: "950,000원", price: "효자동 쌀국수 식사 1번")
         case .kio:
-            return Info(brandName: "인천광역시 계양구 계산동", productName: "이거다! 서창교", discountPercent: "100%", before: "25원", price: "소주 한방울")
+            return Info(brandName: "인천광역시 계양구 계산동", productName: "MC2 찢는 래퍼출신 개크리더 키오", discountPercent: "100%", before: "25원", price: "에비앙")
         case .ahzy:
-            return Info(brandName: "대구광역시 중구 남산동", productName: "엉춘", discountPercent: "0%", before: "1000원", price: "콜로세운 테라 500cc 2잔")
+            return Info(brandName: "대구광역시 중구 남산동", productName: "★[AZHY]★당충전스윗F남✓ ★대구풀코스★획득기회@@", discountPercent: "10%", before: "1000원", price: "콜로세운 테라 500cc 2잔")
         case .eren:
-            return Info(brandName: "애플아카데미", productName: "에렌", discountPercent: "55%", before: "5,555,555원", price: "에렌과 일일데이트 일회권")
+            return Info(brandName: "애플아카데미", productName: "순정남 스윗가이와 달데를, 진짜웃음추출가능", discountPercent: "55%", before: "5,555,555원", price: "에렌과 일일데이트 일회권")
         case .zam:
-            return Info(brandName: "쌍문동", productName: "쨈", discountPercent: "63%", before: "물회", price: "라멘 베라보")
+            return Info(brandName: "쌍문동", productName: "살다살다 이렇게 메모하는사람 처음봄 쨈", discountPercent: "63%", before: "물회", price: "라멘 베라보")
         case .koong:
-            return Info(brandName: "세종특별시 고운동", productName: "믿고 쓰셔도 됩니다.[단, 교환 환불 X]", discountPercent: "0.1%", before: "", price: "소주한잔")
+            return Info(brandName: "세종특별시 고운동", productName: "맑눈광 교환환불X 쿵 예뻐해주세요", discountPercent: "0.1%", before: "", price: "소주 한 잔")
         default:
             return Info()
         }
