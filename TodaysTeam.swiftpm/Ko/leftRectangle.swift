@@ -60,7 +60,7 @@ struct leftRectangle : View {
                 
                 VStack{
                     HStack(alignment:.top){
-                        self.img
+                      Image(uiImage:  member.info.numsa[0]) 
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width:150, height:150)
