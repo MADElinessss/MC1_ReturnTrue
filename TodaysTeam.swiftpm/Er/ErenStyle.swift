@@ -11,6 +11,7 @@ extension Style {
         .style4(image: ["eren_flower1", "eren_flower2", "eren_flower3"]),
         .style6(image: "eren_jeju"),
         .style8(image: "eren_game", title: "저는 게임을 좋아해요", subTitle: "스유로 만든 플래피버드 게임이에요\n개발은 계속 진행중이에요 :)"),
+        .style4(image: ["eren_small1", "eren_small2", "eren_small3"]),
         .style3(image: "eren_busan"),
         .style5(title: "프로젝트제작 성공하시려면 저 에렌과 진행하셔야 합니다", subTitle: "1. 무료상담 또는 기초질의서 작성\n2. 작업 가능 여부 및 견적과 기간 안내\n3.팀원과의 커뮤니케이션을 통해 공동의 서비스 기획\n4. 서비스 목표와 연계된 기능 파악\n5. 매시간 팀원들과 피드백 회의 진행\n6. 피드백 반영 및 추가 작업 진행"),
         .style14(image: "eren_asan"),
